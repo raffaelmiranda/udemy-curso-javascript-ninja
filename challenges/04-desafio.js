@@ -36,6 +36,7 @@ console.log(isTruthy(20 * 30));
 console.log(isTruthy(10 + 10));
 console.log(isTruthy([1, 2, 3]));
 console.log(isTruthy({ a: 1, b: 2 }));
+console.log(isTruthy(function () {}));
 
 /*
 Declare uma variável chamada `carro`, atribuindo à ela um objeto com as

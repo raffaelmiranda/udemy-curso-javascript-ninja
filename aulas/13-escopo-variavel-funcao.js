@@ -7,7 +7,7 @@ var myvar = 1;
 console.log(myvar);
 
 function myFunction() {
-  return myvar; //consegue acessar dentro de escopo locais
+  return myvar; //a variavel global myvar consegue ser acessada dentro de escopo locais
 }
 myFunction();
 
@@ -16,14 +16,13 @@ function otherFunction() {
   return otherVar;
 }
 otherFunction();
-//console.log(otherVar); //não consegue acessar dentro de escopo local pois não existe fora da função
+//console.log(otherVar); //a variavel local otherVar declarada dentro da função não consegue acessada fora
 
-//Pode-se criar um variavel sem a palavra var, ela passa ser global mesmo estando dentro de um função
 function newFunction() {
-  newVar = true;
+  newVar = true; //Pode-se criar um variavel sem a palavra var, ela passa ser global mesmo estando dentro de um função
   return newVar;
 }
-//console.log(newVar); //vai dar erro pois como a função não foi invocada ainda, a váriavel newVar não existe
+//console.log(newVar); //vai dar erro pois como a função newFunction não foi invocada ainda, a váriavel newVar não existe
 newFunction();
 console.log(newVar);
 
@@ -32,4 +31,4 @@ function outraFunction(a, b, c) {
 }
 outraFunction(1);
 outraFunction(1, 2);
-//console.log(a); Erro pois a váriavel a é local dentro da função
+//console.log(a); Erro pois o parametro 'a' da função é local dentro da função
