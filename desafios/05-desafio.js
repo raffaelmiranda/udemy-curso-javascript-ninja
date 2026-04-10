@@ -22,8 +22,8 @@ segundo, um número. A função deve retornar o valor de um índice do array que
 no primeiro parâmetro. O índice usado para retornar o valor, deve ser o número passado no
 segundo parâmetro.
 */
-function myFunction2(param, index) {
-  return param[index];
+function myFunction2(arr, index) {
+  return arr[index];
 }
 
 /*
@@ -76,6 +76,7 @@ function livro(nomeLivro) {
 
   return !nomeLivro ? livros : livros[nomeLivro];
 }
+
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
