@@ -11,10 +11,9 @@ Qual loop você deve usar para que essa mensagem seja mostrada no console?
   var once = false;
   do {
     console.log("Entrou ao menos uma vez!");
-    once = true;
-  } while ((once = false));
+  } while (once);
 
-  /*
+  /* 
 Crie um objeto chamado `person`, que receba as seguintes propriedades:
 - 'name', 'age', 'weight' e 'birthday'. Preencha com os valores corretos
 para o nome, idade, peso e data de nascimento dessa pessoa.
@@ -48,15 +47,11 @@ Se verdadeiro, retornar `true`. Senão, retornar false.
 Após a função, mostrar a mensagem no console:
 'The person has more than 25 years old? [TRUE/FALSE]'
 */
-  var moreThan = function (years) {
-    if (person.age < years) {
-      return true;
-    } else {
-      return false;
-    }
+  var moreThan = function (age) {
+    return person.age > age;
   };
 
-  console.log("The person has more than 25 years old? " + moreThan(4));
+  console.log("The person has more than 25 years old? " + moreThan(56));
 
   /*
 Faça um loop de 0 a 20, que adicione cada número como um item de um
@@ -64,11 +59,14 @@ array chamado `numbers`. Se o contador for maior que 10, saia do loop.
 Mostre no console os números no array.
 */
   console.log("De 0 a 10:");
-  var counter = 0;
   var numbers = [];
-  while (counter <= 10) {
-    numbers.push(counter++);
+  for (var i = 0; i < 20; i++) {
+    if (i > 10) {
+      break;
+    }
+    numbers.push(i);
   }
+
   console.log(numbers);
   /*
 Faça outro loop de 0 a 20, que adicione a um array chamado `numbers` (já
@@ -78,13 +76,12 @@ Mostrar no console os números do array.
 */
 
   console.log("Pares de 0 a 20:");
-  counter = 0;
   numbers = [];
-  while (counter <= 20) {
-    if (counter % 2 == 0) {
-      numbers.push(counter);
+  for (var i = 0; i <= 20; i++) {
+    if (i % 2 !== 0) {
+      continue;
     }
-    counter++;
+    numbers.push(i);
   }
   console.log(numbers);
 })();
